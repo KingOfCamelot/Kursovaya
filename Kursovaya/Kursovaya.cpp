@@ -27,6 +27,10 @@ void Show(stack* tmp)
         temp = temp->next;
     }
 }
+bool empty(stack* tmp)
+{
+    return tmp->head == nullptr;
+}
 void Computation(char* ArrayForCalculating, int size)
 {
     stack* notation = new stack;
@@ -121,6 +125,14 @@ void Computation(char* ArrayForCalculating, int size)
 }
 void Convert(int size, char* ArrayForConvert_2)
 {
+    int index = 0, OpeningParentheses = 0, ClosingParentheses = 0;
+    while (index < size)
+    {
+        if (ArrayForConvert_2[index] == '(') OpeningParentheses++;
+        if (ArrayForConvert_2[index] == ')') ClosingParentheses++;
+        index++;
+    }
+    if (OpeningParentheses != ClosingParentheses) throw invalid_argument("Brace mismatch");
     stack* notation = new stack;
     notation->head = NULL;
     char* ResultOfConvert = new char[size];
@@ -195,7 +207,9 @@ void Convert(int size, char* ArrayForConvert_2)
             pop(notation);
             temp++;
         }
+        if (temp == 0) throw invalid_argument("Incorrectly entered expression");
     }
+    if (temp != i) throw invalid_argument("Incorrectly entered expression");
     while (notation->head != nullptr)
     {
         ResultOfConvert[i] = notation->head->key;
