@@ -3,19 +3,29 @@
 #include <iostream>
 struct stack
 {
+public:
     char key;
     stack* next;
     stack* head;
-    /*~stack()
+    ~stack()
     {
         if (head != nullptr)
         {
             while (head != nullptr)
             {
-                pop();
+                stack* temp = head;
+                stack* prev = NULL;
+                while (temp->next)
+                {
+                    prev = temp;
+                    temp = temp->next;
+                }
+                if (prev) prev->next = NULL;
+                else head = NULL;
+                if (temp) delete temp;
             }
         }
-    }*/
+    }
 };
 void Convert(int size, char* ArrayForConvert_2);
 #endif

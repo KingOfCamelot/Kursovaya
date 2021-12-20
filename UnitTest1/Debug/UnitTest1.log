@@ -1,2 +1,4 @@
-﻿  UnitTest1.cpp
+﻿  Kursovaya.cpp
+C:\Users\Артур\Desktop\АиСД\kurs\kurs1\Kursovaya\Kursovaya\Kursovaya.cpp(110,28): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+     Создается библиотека C:\Users\Артур\Desktop\АиСД\kurs\kurs1\Kursovaya\Debug\UnitTest1.lib и объект C:\Users\Артур\Desktop\АиСД\kurs\kurs1\Kursovaya\Debug\UnitTest1.exp
   UnitTest1.vcxproj -> C:\Users\Артур\Desktop\АиСД\kurs\kurs1\Kursovaya\Debug\UnitTest1.dll

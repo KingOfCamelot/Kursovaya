@@ -147,6 +147,22 @@ void Convert(int size, char* ArrayForConvert_2)
             i++;
             continue;
         }
+        /*if (ArrayForConvert_2[temp] == 'l' && ArrayForConvert_2[temp + 1] == 'o' && ArrayForConvert_2[temp + 2] == 'g')
+        {
+            ResultOfConvert[i] = ArrayForConvert_2[temp];
+            ResultOfConvert[i + 1] = ArrayForConvert_2[temp + 1];
+            ResultOfConvert[i + 2] = ArrayForConvert_2[temp + 2];
+            temp = temp + 3;
+            i = i + 3;
+            while (isdigit(ArrayForConvert_2[temp]))
+            {
+                ResultOfConvert[i] = ArrayForConvert_2[temp];
+                cout << ResultOfConvert[i] << endl;
+                if ()
+            }
+            temp--; i--;
+            continue;
+        }*/
         if (ArrayForConvert_2[temp] == 'e')
         {
             ResultOfConvert[i] = ArrayForConvert_2[temp];
@@ -220,7 +236,7 @@ void Convert(int size, char* ArrayForConvert_2)
     Computation(ArrayForConvert_2, (size - parentheses));
 }
 int main()
-{   
+{
     string Expression;
     cout << "Enter your expression: ";
     cin >> Expression;
@@ -230,6 +246,6 @@ int main()
     for (int i = 0; i < SizeExpression; ++i) ArrayForConvert[i] = Expression[i];
     Convert(SizeExpression, &*ArrayForConvert);
     cout << "Result of Convert: ";
-    for (int i = 0; i < 11; ++i) cout << ArrayForConvert[i];
+    for (int i = 0; i < 7; ++i) cout << ArrayForConvert[i];
     return 0;
 }
